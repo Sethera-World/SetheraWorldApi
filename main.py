@@ -1,3 +1,5 @@
+import fastapi
+
 def main():
     print("Hello from sethera-world!")
 

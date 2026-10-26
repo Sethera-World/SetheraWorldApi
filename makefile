@@ -1,5 +1,5 @@
 run:
-	uv run fastapi dev
+	uv run fastapi dev  --reload
 
 format:
 	uv run ruff check --fix --unsafe-fixes

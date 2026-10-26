@@ -1,9 +1,42 @@
 [project]
-name = "sethera-world"
-version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.14"
+name = 'sethera-world'
+version = '0.1.0'
+description = 'Add your description here'
+readme = 'README.md'
+requires-python = '>=3.14'
 dependencies = [
-    "fastapi[standard]>=0.143.1",
+    'fastapi[standard]>=0.143.1',
 ]
+
+[dependency-groups]
+dev = [
+    'ruff>=0.17.2',
+]
+
+[tool.ruff]
+line-length = 79
+extend-exclude = [
+    'migrations',
+]
+
+[tool.ruff.lint]
+preview = true
+select = [
+    'B',
+    'E',
+    'F',
+    'I',
+    'N',
+    'Q',
+    'RUF',
+    'S',
+    'T',
+    'W',
+    'PL',
+    'PT'
+]
+ignore = ["bad-quotes-inline-string", "avoidable-escaped-quote"]
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'

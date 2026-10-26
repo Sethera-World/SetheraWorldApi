@@ -1,13 +1,5 @@
-from fastapi import FastAPI
+from src.app import app
 
-app = FastAPI()
 
-@app.get("/")
-async def read_root():
-    return {"Hello": "World"}
-
-def main():
-    print("Hello from sethera-world!")
-
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    app.run()
